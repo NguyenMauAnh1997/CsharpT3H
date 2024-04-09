@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1C3DA86-8F17-45E0-8F33-6A48364B7A61}</ProjectGuid>
+    <ProjectGuid>{E09BACD7-64AB-4D01-BCEE-8383CCE6524A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CShapT3H</RootNamespace>
-    <AssemblyName>CShapT3H</AssemblyName>
+    <RootNamespace>CsharpBasic</RootNamespace>
+    <AssemblyName>CsharpBasic</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helper.cs" />
-    <Compile Include="HoaDon.cs" />
+    <Compile Include="Bai6.cs" />
+    <Compile Include="MyCommonLibs.cs" />
+    <Compile Include="MyGeneric.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinhVien.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

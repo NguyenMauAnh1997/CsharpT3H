@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace CShapT3H
 {
+    public enum statusNo
+    {
+        HET_NO = 0,
+        CON_NO = 1
+    }
     public struct HoaDon
     {
         public string MaHoaDon { set; get; }
