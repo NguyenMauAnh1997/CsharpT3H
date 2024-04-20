@@ -1,7 +1,0 @@
-D:\C#New\CShapT3H\CsharpBasic\bin\Debug\CsharpBasic.exe.config
-D:\C#New\CShapT3H\CsharpBasic\bin\Debug\CsharpBasic.exe
-D:\C#New\CShapT3H\CsharpBasic\bin\Debug\CsharpBasic.pdb
-D:\C#New\CShapT3H\CsharpBasic\obj\Debug\CsharpBasic.csproj.AssemblyReference.cache
-D:\C#New\CShapT3H\CsharpBasic\obj\Debug\CsharpBasic.csproj.CoreCompileInputs.cache
-D:\C#New\CShapT3H\CsharpBasic\obj\Debug\CsharpBasic.exe
-D:\C#New\CShapT3H\CsharpBasic\obj\Debug\CsharpBasic.pdb
