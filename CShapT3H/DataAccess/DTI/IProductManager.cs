@@ -9,6 +9,6 @@ namespace DataAccess.DTI
 {
     interface IProductManagerDTI
     {
-        ReturnData BuyProduct(DTO.Product product);
+        ReturnData BuyProduct();
     }
 }

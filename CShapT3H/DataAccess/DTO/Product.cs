@@ -8,9 +8,9 @@ namespace DataAccess.DTO
 {
     public class Product
     {
-        public string TenHangHoa { get; set; }
-        public string DonGia { get; set; }
-        public string SoLuong { get; set; }
-        
+        public string ProductCode { get; set; }
+        public string ProductName { get; set; }
+        public int Price { get; set; }
+        public int Stock { get; set; }
     }
 }

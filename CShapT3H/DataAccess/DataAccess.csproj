@@ -41,19 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="DTA\ProductManage.cs" />
+    <Compile Include="DTIM\ProductManage.cs" />
     <Compile Include="DTI\IProductManager.cs" />
-    <Compile Include="DTO\HangDienTu.cs" />
-    <Compile Include="DTO\HangHoa.cs" />
-    <Compile Include="DTO\HangThucPham.cs" />
-    <Compile Include="DTO\NhanVien.cs" />
-    <Compile Include="DTO\NhanVienBanThoiGian.cs" />
-    <Compile Include="DTO\NhanVienThucTap.cs" />
-    <Compile Include="DTO\NhanVienToanThoiGian.cs" />
+    <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\Product.cs" />
+    <Compile Include="DTO\ReturnData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLibs\CommonLibs.csproj">
+      <Project>{edb771e1-ef84-4fe5-a297-e25071019faf}</Project>
+      <Name>CommonLibs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

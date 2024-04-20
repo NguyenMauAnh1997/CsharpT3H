@@ -9,6 +9,6 @@ namespace DataAccess.DTO
     public class ReturnData
     {
         public int ReturnCode { set; get; }
-        public int ReturnMsg { set; get; }
+        public string ReturnMsg { set; get; }
     }
 }

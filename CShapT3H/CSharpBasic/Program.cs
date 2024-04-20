@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.DTA;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,11 @@ namespace CSharpBasic
     {
         static void Main(string[] args)
         {
+            //Bai 9 BT3
+            ProductManage productManage = new ProductManage();
+            productManage.BuyProduct();
 
+            Console.ReadLine();
         }
     }
 }

@@ -1,0 +1,6 @@
+D:\C#New\CShapT3H\CommonLibs\bin\Debug\CommonLibs.dll
+D:\C#New\CShapT3H\CommonLibs\bin\Debug\CommonLibs.pdb
+D:\C#New\CShapT3H\CommonLibs\obj\Debug\CommonLibs.csproj.AssemblyReference.cache
+D:\C#New\CShapT3H\CommonLibs\obj\Debug\CommonLibs.csproj.CoreCompileInputs.cache
+D:\C#New\CShapT3H\CommonLibs\obj\Debug\CommonLibs.dll
+D:\C#New\CShapT3H\CommonLibs\obj\Debug\CommonLibs.pdb

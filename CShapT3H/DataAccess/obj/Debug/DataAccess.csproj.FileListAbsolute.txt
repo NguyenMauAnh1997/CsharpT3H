@@ -1,0 +1,9 @@
+D:\C#New\CShapT3H\DataAccess\bin\Debug\DataAccess.dll
+D:\C#New\CShapT3H\DataAccess\bin\Debug\DataAccess.pdb
+D:\C#New\CShapT3H\DataAccess\bin\Debug\CommonLibs.dll
+D:\C#New\CShapT3H\DataAccess\bin\Debug\CommonLibs.pdb
+D:\C#New\CShapT3H\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\C#New\CShapT3H\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\C#New\CShapT3H\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\C#New\CShapT3H\DataAccess\obj\Debug\DataAccess.dll
+D:\C#New\CShapT3H\DataAccess\obj\Debug\DataAccess.pdb
