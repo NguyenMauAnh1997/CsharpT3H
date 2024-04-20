@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CShapT3H")]
+[assembly: AssemblyTitle("CSharpBasic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CShapT3H")]
+[assembly: AssemblyProduct("CSharpBasic")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("22fc27d1-0f8f-46b5-bcff-9db59b5f2f4a")]
+[assembly: Guid("4aa6a189-2c43-4de9-8f19-7fc5780ca227")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1C3DA86-8F17-45E0-8F33-6A48364B7A61}</ProjectGuid>
+    <ProjectGuid>{4AA6A189-2C43-4DE9-8F19-7FC5780CA227}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CShapT3H</RootNamespace>
-    <AssemblyName>CShapT3H</AssemblyName>
+    <RootNamespace>CSharpBasic</RootNamespace>
+    <AssemblyName>CSharpBasic</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helper.cs" />
-    <Compile Include="HoaDon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

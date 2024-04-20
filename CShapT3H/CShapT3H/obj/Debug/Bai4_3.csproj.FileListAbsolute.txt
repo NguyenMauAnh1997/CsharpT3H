@@ -1,7 +1,0 @@
-D:\C#New\CShapT3H\CShapT3H\bin\Debug\CShapT3H.exe.config
-D:\C#New\CShapT3H\CShapT3H\bin\Debug\CShapT3H.exe
-D:\C#New\CShapT3H\CShapT3H\bin\Debug\CShapT3H.pdb
-D:\C#New\CShapT3H\CShapT3H\obj\Debug\Bai4_3.csproj.AssemblyReference.cache
-D:\C#New\CShapT3H\CShapT3H\obj\Debug\Bai4_3.csproj.CoreCompileInputs.cache
-D:\C#New\CShapT3H\CShapT3H\obj\Debug\CShapT3H.exe
-D:\C#New\CShapT3H\CShapT3H\obj\Debug\CShapT3H.pdb
