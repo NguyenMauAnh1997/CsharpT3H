@@ -41,5 +41,30 @@ namespace CsharpBasic
             if (charString.Count() == checkNoChar) return true;
             return false;
         }
+        /// <summary>
+        /// check String is Number and less than Zero and MAX is 9,223,370,036,854,775,807
+        /// </summary>
+        /// <returns></returns>
+        public static bool checkIsNumberAndLessThanZero(string s)
+        {
+            try
+            {
+                long changeToNumberInt = Int64.Parse(s);
+                if (changeToNumberInt > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            return true;
+        }
     }
 }

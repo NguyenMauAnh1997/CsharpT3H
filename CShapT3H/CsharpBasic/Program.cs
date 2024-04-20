@@ -10,9 +10,9 @@ namespace CsharpBasic
     {
         static void Main(string[] args)
         {
-            Bai6.Run();
-
-
+            List<Book> books = new List<Book>();
+            Library.AddBook(books);
+            //Bai6.Run();
 
             Console.ReadLine();
         }
