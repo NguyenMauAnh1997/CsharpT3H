@@ -9,6 +9,6 @@ namespace DataAccess.DTI
 {
     interface IStudentRegister
     {
-        ReturnData RegisterCource(Course course, Student student);
+        ReturnData RegisterCource();
     }
 }

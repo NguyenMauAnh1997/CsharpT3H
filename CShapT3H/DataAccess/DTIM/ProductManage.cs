@@ -151,7 +151,7 @@ namespace DataAccess.DTA
             {
                 Console.Write("Hay Nhap Ma San Pham can Mua: ");
                 var strMaSanPham = Console.ReadLine();
-                var searchSanPham = listProduct.Select(r => r.ProductCode).FirstOrDefault();
+                var searchSanPham = listProduct.Where(r => r.ProductCode == strMaSanPham). Select(r => r.ProductCode).FirstOrDefault();
                 if (searchSanPham == null)
                 {
                     Console.WriteLine("Input Error !  Xin Hay Nhap Lai");
@@ -160,7 +160,7 @@ namespace DataAccess.DTA
                 else
                 {
                     bill.MaSanPham = strMaSanPham;
-                    stockSanPham = listProduct.Select(r => r.Stock).FirstOrDefault();
+                    stockSanPham = listProduct.Where(r => r.ProductCode == strMaSanPham).Select(r => r.Stock).FirstOrDefault();
                     checkMaSanPham = false;
                 }
 
@@ -193,8 +193,8 @@ namespace DataAccess.DTA
 
             } while (checkInputSoluong);
 
-            bill.TenSanPham = listProduct.Select(r => r.ProductName).FirstOrDefault();
-            bill.DonGia = listProduct.Select(r => r.Price).FirstOrDefault();
+            bill.TenSanPham = listProduct.Where(r => r.ProductCode == bill.MaSanPham).Select(r => r.ProductName).FirstOrDefault();
+            bill.DonGia = listProduct.Where(r => r.ProductCode == bill.MaSanPham).Select(r => r.Price).FirstOrDefault();
             bill.ThanhTien = bill.DonGia * bill.SoLuong;
 
             listBill.Add(bill);

@@ -8,6 +8,7 @@ namespace DataAccess.DTO
 {
     public class Course
     {
+        public string CourseCode { set; get; }
         public string CourseName { set; get; }
         public string CourseDes { set; get; }
         public int CourseCost { set; get; }

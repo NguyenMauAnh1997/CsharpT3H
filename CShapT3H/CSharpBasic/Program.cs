@@ -17,6 +17,9 @@ namespace CSharpBasic
             StudentRegister studentRegister = new StudentRegister();
             studentRegister.InputInfoCource();
 
+            //Bai 9 BT2.1 Dang ky khoa hoc
+            studentRegister.RegisterCource();
+
             //Bai 9 BT3
             ProductManage productManage = new ProductManage();
             productManage.BuyProduct();

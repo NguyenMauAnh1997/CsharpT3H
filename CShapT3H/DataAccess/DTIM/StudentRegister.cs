@@ -11,6 +11,7 @@ namespace DataAccess.DTIM
     public class StudentRegister : DTI.IStudentRegister
     {
         List<Course> courses = new List<Course>();
+        List<StudentCourse> lstStudentCourse = new List<StudentCourse>();
 
         public void InputInfoCource()
         {
@@ -18,6 +19,25 @@ namespace DataAccess.DTIM
             do
             {
                 Console.WriteLine("NHAP THONG TIN KHOA HOC");
+
+                bool checkCourseCode = true;
+                var courseCode = "";
+                do
+                {
+                    Console.Write("Ma Khoa Hoc: ");
+                    courseCode = Console.ReadLine();
+                    if (CommonLibs.ValidationData.CheckIsNullOrWhiteSpace(courseCode))
+                    {
+                        Console.WriteLine("Input Error !!! Please Retry Input ");
+                        checkCourseCode = true;
+                    }
+                    else
+                    {
+                        checkCourseCode = false;
+                    }
+
+                } while (checkCourseCode);
+
 
                 bool checkCourseName = true;
                 var courseName = "";
@@ -83,7 +103,7 @@ namespace DataAccess.DTIM
                     Console.Write("Ngay Khai Giang (dd/MM/yyy): ");
                     var strCourseStartTime = Console.ReadLine();
 
-                    if (CommonLibs.ValidationData.CheckIsNullOrWhiteSpace(strCourseStartTime) 
+                    if (CommonLibs.ValidationData.CheckIsNullOrWhiteSpace(strCourseStartTime)
                         || !CommonLibs.ValidationData.CheckDateTimeFormat(strCourseStartTime, "dd/MM/yyyy"))
                     {
                         Console.WriteLine("Input Error !!! Please Retry Input ");
@@ -129,9 +149,133 @@ namespace DataAccess.DTIM
             } while (checkNexInput);
         }
 
-        public ReturnData RegisterCource(Course course, Student student)
+        public ReturnData RegisterCource()
         {
-            throw new NotImplementedException();
+            ReturnData returnData = new ReturnData();
+            try
+            {
+                Console.WriteLine("-----------DANG KY KHOA HOC-----------");
+
+                bool checkStudentName = true;
+                var studentName = "";
+                do
+                {
+                    Console.Write("Ten Sinh Vien: ");
+                    studentName = Console.ReadLine();
+                    if (CommonLibs.ValidationData.CheckIsNullOrWhiteSpace(studentName) || CommonLibs.ValidationData.CheckContainSpecialChar(studentName))
+                    {
+                        Console.WriteLine("Input Error !!! Please Retry Input ");
+                        checkStudentName = true;
+                    }
+                    else
+                    {
+                        checkStudentName = false;
+                    }
+
+                } while (checkStudentName);
+
+
+                bool checkStudentBirthday = true;
+                DateTime studentBirthday = new DateTime();
+                do
+                {
+                    Console.Write("Ngay Sinh Sinh Vien (dd/MM/yyy): ");
+                    var strStudentBirthday = Console.ReadLine();
+
+                    if (CommonLibs.ValidationData.CheckIsNullOrWhiteSpace(strStudentBirthday)
+                        || !CommonLibs.ValidationData.CheckDateTimeFormat(strStudentBirthday, "dd/MM/yyyy"))
+                    {
+                        Console.WriteLine("Input Error !!! Please Retry Input ");
+                        checkStudentBirthday = true;
+                    }
+                    else
+                    {
+                        checkStudentBirthday = false;
+                        studentBirthday = DateTime.ParseExact(strStudentBirthday, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    }
+
+                } while (checkStudentBirthday);
+
+
+                bool checkRegisterDate = true;
+                DateTime registerDate = new DateTime();
+                do
+                {
+                    Console.Write("Ngay Dang Ky (dd/MM/yyy): ");
+                    var strRegisterDate = Console.ReadLine();
+
+                    if (CommonLibs.ValidationData.CheckIsNullOrWhiteSpace(strRegisterDate)
+                        || !CommonLibs.ValidationData.CheckDateTimeFormat(strRegisterDate, "dd/MM/yyyy"))
+                    {
+                        Console.WriteLine("Input Error !!! Please Retry Input ");
+                        checkRegisterDate = true;
+                    }
+                    else
+                    {
+                        checkRegisterDate = false;
+                        registerDate = DateTime.ParseExact(strRegisterDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    }
+
+                } while (checkRegisterDate);
+
+
+                bool checkCourseCode = true;
+                var courseCode = "";
+                do
+                {
+                    Console.Write("Ma Khoa Hoc: ");
+                    courseCode = Console.ReadLine();
+                    var searchCourseCode = courses.Where(s => s.CourseCode == courseCode)
+                                            .Select(r => r.CourseCode).FirstOrDefault();
+                    if (CommonLibs.ValidationData.CheckIsNullOrWhiteSpace(courseCode) || searchCourseCode == null)
+                    {
+                        Console.WriteLine("Input Error !!! Please Retry Input ");
+                        checkCourseCode = true;
+                    }
+                    else
+                    {
+                        checkCourseCode = false;
+                    }
+
+                } while (checkCourseCode);
+
+
+                StudentCourse studentCourse = new StudentCourse();
+                studentCourse.StudentName = studentName;
+                studentCourse.StudentBirthDay = studentBirthday;
+                studentCourse.CourseCode = courseCode;
+                studentCourse.RegisterDate = registerDate;
+                studentCourse.CourseCost = courses.Where(r => r.CourseCode == courseCode).Select(r => r.CourseCost).FirstOrDefault();
+
+                var courseStartTime = courses.Where(r => r.CourseCode == courseCode).Select(r => r.CourseStartTime).FirstOrDefault();
+                // Kiem tra som 30 ngay hay khong giam 30%
+                if (DateTime.Compare(registerDate, courseStartTime.AddDays(-30)) < 0)
+                {
+                    studentCourse.CourseCostAfterCacul = studentCourse.CourseCost * (0.7);
+                }// Kiem tra som 10 ngay hay khong giam 10%
+                else if (DateTime.Compare(registerDate, courseStartTime.AddDays(-10)) < 0)
+                {
+                    studentCourse.CourseCostAfterCacul = studentCourse.CourseCost * (0.9);
+                }
+                else
+                {
+                    studentCourse.CourseCostAfterCacul = studentCourse.CourseCost;
+                }
+
+                lstStudentCourse.Add(studentCourse);
+
+                returnData.ReturnCode = 1;
+                returnData.ReturnMsg = "SUCCESS ! ";
+                return returnData;
+            }
+            catch (Exception)
+            {
+                returnData.ReturnCode = 0;
+                returnData.ReturnMsg = "SYSTEM ERROR ! ";
+                return returnData;
+            }
+
+            
         }
     }
 }
