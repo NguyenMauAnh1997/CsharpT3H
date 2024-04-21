@@ -11,6 +11,7 @@ namespace DataAccess.DTO
         public DateTime RegisterDate { set; get; }
         public Double CourseCost { set; get; }
         public string CourseCode { set; get; }
+        public int DiscountLevel { set; get; }
         public Double CourseCostAfterCacul { set; get; }
     }
 }

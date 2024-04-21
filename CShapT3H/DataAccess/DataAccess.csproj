@@ -50,6 +50,7 @@
     <Compile Include="DTO\Product.cs" />
     <Compile Include="DTO\ReturnData.cs" />
     <Compile Include="DTO\Student.cs" />
+    <Compile Include="DTO\StudentCourse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
