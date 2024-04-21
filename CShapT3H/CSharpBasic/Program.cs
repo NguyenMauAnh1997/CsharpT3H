@@ -14,8 +14,6 @@ namespace CSharpBasic
         {
 
 
-
-
             //Bai 9 BT2.1 Nhap Thong Tin Khoa  Hoc
             StudentRegister studentRegister = new StudentRegister();
             studentRegister.InputInfoCource();

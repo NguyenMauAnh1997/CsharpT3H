@@ -294,9 +294,12 @@ namespace DataAccess.DTIM
 
                     } while (inputIsCorrect) ;
 
-                    returnData.ReturnCode = 1;
+                } while (checkNexInput);
+
+                returnData.ReturnCode = 1;
                 returnData.ReturnMsg = "SUCCESS ! ";
                 return returnData;
+
             }
             catch (Exception)
             {

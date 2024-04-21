@@ -48,6 +48,24 @@ namespace CommonLibs
             }
         }
 
+        public static bool CheckIsNumberAndLessThanZeroDouble(string input)
+        {
+            try
+            {
+                double number = double.Parse(input);
+                if (number <= 0)
+                {
+                    return false;
+                }
+                else
+                    return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public static bool CheckDateTimeFormat(string input, string dateFormat)
         {
             try
