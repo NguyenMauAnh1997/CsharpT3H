@@ -41,11 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTIM\StudentRegister.cs" />
+    <Compile Include="DTI\IStudentRegister.cs" />
     <Compile Include="DTIM\ProductManage.cs" />
     <Compile Include="DTI\IProductManager.cs" />
     <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\Course.cs" />
     <Compile Include="DTO\Product.cs" />
     <Compile Include="DTO\ReturnData.cs" />
+    <Compile Include="DTO\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

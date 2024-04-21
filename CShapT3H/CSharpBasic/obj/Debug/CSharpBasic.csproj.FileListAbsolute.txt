@@ -8,3 +8,5 @@ D:\C#New\CShapT3H\CSharpBasic\obj\Debug\CSharpBasic.csproj.CoreCompileInputs.cac
 D:\C#New\CShapT3H\CSharpBasic\obj\Debug\CSharpBasic.csproj.CopyComplete
 D:\C#New\CShapT3H\CSharpBasic\obj\Debug\CSharpBasic.exe
 D:\C#New\CShapT3H\CSharpBasic\obj\Debug\CSharpBasic.pdb
+D:\C#New\CShapT3H\CSharpBasic\bin\Debug\CommonLibs.dll
+D:\C#New\CShapT3H\CSharpBasic\bin\Debug\CommonLibs.pdb
